@@ -5,9 +5,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { routing } from './app.routing';
 
-
+import { AlertComponent } from './_components';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
@@ -17,6 +17,7 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 @NgModule({
   declarations: [
     AppComponent,
+    AlertComponent,
     LoginComponent,
     HomeComponent,
     AdminComponent,
@@ -24,7 +25,7 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    routing,
     HttpClientModule,
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot()

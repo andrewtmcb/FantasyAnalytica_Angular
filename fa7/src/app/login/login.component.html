@@ -1,9 +1,9 @@
 <section class="form-simple">
   <mdb-card>
-    <!--Header-->>
+    <!--Header-->
     <div class="deader pt -3 grey lighten-2">
       <div class="row d-flex justify-content-start">
-        <h3 class= "deep-grey-test mt-3 mb-4 pb-1 mx-5">Member log in</h3>>
+        <h3 class= "deep-grey-test mt-3 mb-4 pb-1 mx-5">Member log in</h3>
       </div>
     </div>
     <!--HeaderEnd-->
@@ -11,7 +11,7 @@
     <mdb-card-body class="mx-4 mt-4">
 
       <!--Body-->
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="loginForm">
         <div class="md-form">
           <input type="text" formControlName="email" id="email" class="form-control" [ngClass]="{'is-invalid': submitted && f.email.errors}" mdbInput>
           <label for="email">Your email</label>
@@ -28,11 +28,11 @@
         </div>
 
         <div class="text-center mb-4">
-          <button [disabled]="loading" type="button" mdbBtn color="danger" block="true" class="z-depth-2">Log in</button>
+          <button [disabled]="loading" (click)="onSubmit()" type="button" mdbBtn color="danger" block="true" class="z-depth-2">Log in</button>
         </div>
       </form>
       <p class="font-small grey-text d-flex justify-content-center">Don't have an account?
-          <a routerLink"/register" class="dark-grey-text font-weight-bold ml-1"> New account registration</a>
+          <!--<a routerLink"/register" class="dark-grey-text font-weight-bold ml-1"> New account registration</a>-->
       </p>
     </mdb-card-body>
   </mdb-card>

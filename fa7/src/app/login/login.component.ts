@@ -7,7 +7,7 @@ import { AlertService, AuthenticationService } from '@app/_services';
 
 @Component({
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
   get f() {return this.loginForm.controls; }
 
   onSubmit() {
+    console.log('submit');
     this.submitted = true;
 
     // catch invalid form
